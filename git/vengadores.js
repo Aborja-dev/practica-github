@@ -1,21 +1,19 @@
 export const vengadores = [
 {
-  id: 1,
   nombre: "iron-man",
   fecha_entrada: "11/10/2021"
 },
 {
-  id: 2,
   nombre: "hulk",
   fecha_entrada: "16/10/2021"
 },
 {
-  id: 3,
+  id: 99,
   nombre: "spiderman",
   fecha_entrada: "11/11/2021"
 },
 {
-  id: 4,
+  id: 99,
   nombre: "thor",
   fecha_entrada: "11/10/2022"
 },
@@ -32,6 +30,11 @@ export const vengadores = [
   {
   id: 7,
   nombre: "thanos",
+  fecha_entrada: "11/10/2024"
+},
+  {
+  id: 1,
+  nombre: "ultron",
   fecha_entrada: "11/10/2024"
 },
 ]
