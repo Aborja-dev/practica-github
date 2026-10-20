@@ -49,21 +49,8 @@ El objetivo es aprender a gestionar cambios, sincronizar repositorios, integrar 
 3. Localiza en el historial el commit identificado con el mensaje `checkout ok`.
 4. Utiliza `git reset --hard` para regresar al estado de ese commit.
 5. Verifica que el repositorio haya recuperado la versión esperada.
-6. Si el ejercicio requiere actualizar una rama remota de práctica, utiliza `git push --force-with-lease` para publicar el historial restaurado.
+6. actualizar el repositorio remoto con la version correcta, utiliza `git push --force-with-lease` para publicar el historial restaurado.
 
 **Precaución:** `git reset --hard` descarta cambios locales y `git push --force-with-lease` puede reescribir el historial remoto. Realiza este ejercicio únicamente en una rama de práctica y nunca sobre una rama compartida sin autorización.
 
-## Ejercicio 5. Reorganización del historial (Rebase)
 
-**Objetivo:** Aprender a reorganizar el historial de commits e integrar cambios de una rama sobre otra.
-
-**Consigna:**
-
-1. Crea una rama de práctica a partir de `main`.
-2. Realiza varias modificaciones y registra cada una mediante un commit.
-3. Regresa a `main` y crea un commit diferente para simular que el proyecto continuó avanzando.
-4. Vuelve a tu rama de práctica y ejecuta `git rebase main`.
-5. Si se producen conflictos, resuélvelos y continúa el proceso mediante `git rebase --continue`.
-6. Consulta el historial utilizando `git log --oneline --graph` y observa cómo se reorganizaron los commits.
-
-**Nota:** Rebase crea nuevos commits al volver a aplicar los cambios sobre otra base. Por esta razón, sus identificadores pueden cambiar. Evita utilizarlo sobre commits compartidos sin coordinarte con los demás colaboradores.
