@@ -24,4 +24,5 @@ export const vengadores = [
   nombre: "deadpool",
   fecha_entrada: "11/10/2026"
 }
+
 ]
