@@ -2,7 +2,6 @@
 
 En este módulo pondremos en práctica los principales comandos de Git mediante ejercicios que simulan situaciones habituales durante el desarrollo de software.
 
-El objetivo es aprender a gestionar cambios, sincronizar repositorios, integrar ramas y recuperar versiones anteriores.
 
 ## Ejercicio 1. Configuración y conexión
 
@@ -52,5 +51,70 @@ El objetivo es aprender a gestionar cambios, sincronizar repositorios, integrar 
 6. actualizar el repositorio remoto con la version correcta, utiliza `git push --force-with-lease` para publicar el historial restaurado.
 
 **Precaución:** `git reset --hard` descarta cambios locales y `git push --force-with-lease` puede reescribir el historial remoto. Realiza este ejercicio únicamente en una rama de práctica y nunca sobre una rama compartida sin autorización.
+
+
+**Objetivo:** Aprender a reorganizar el historial de commits e integrar cambios de una rama sobre otra.
+
+**Consigna:**
+
+1. Crea una rama de práctica a partir de `main`.
+2. Realiza varias modificaciones y registra cada una mediante un commit.
+3. Regresa a `main` y crea un commit diferente para simular que el proyecto continuó avanzando.
+4. Vuelve a tu rama de práctica y ejecuta `git rebase main`.
+5. Si se producen conflictos, resuélvelos y continúa el proceso mediante `git rebase --continue`.
+6. Consulta el historial utilizando `git log --oneline --graph` y observa cómo se reorganizaron los commits.
+
+**Nota:** Rebase crea nuevos commits al volver a aplicar los cambios sobre otra base. Por esta razón, sus identificadores pueden cambiar. Evita utilizarlo sobre commits compartidos sin coordinarte con los demás colaboradores.
+
+[!TIP] Pro Tip: Autocompletado en Bash
+En Git Bash puedes utilizar la tecla Tab para autocompletar nombres de archivos, carpetas y determinados comandos.
+
+Por ejemplo, si tienes una carpeta llamada proyectos, puedes escribir:
+
+cd pro
+
+Al presionar Tab, Bash completará el nombre de la carpeta si no existen otras coincidencias.
+
+Si hay varias coincidencias, puedes presionar Tab nuevamente para mostrar las opciones disponibles, según la configuración de la terminal.
+
+Esto permite trabajar más rápido y evitar errores al escribir rutas largas.
+
+> [!TIP] Pro Tip: Crear archivos y carpetas en VS Code
+> Visual Studio Code permite crear carpetas y archivos en una sola operación desde el explorador de archivos.
+>
+> Por ejemplo, al seleccionar **Nuevo archivo** y escribir:
+>
+> ```text
+> carpeta/archivo.js
+> ```
+>
+> VS Code creará automáticamente la carpeta `carpeta`, si todavía no existe, y dentro de ella el archivo `archivo.js`.
+>
+> También puedes crear varios niveles de carpetas:
+>
+> ```text
+> src/components/Button.js
+> ```
+>
+> Esto resulta útil para organizar proyectos sin tener que crear cada carpeta manualmente.
+
+> [!TIP] Pro Tip: Crear archivos y carpetas en VS Code
+> Visual Studio Code permite crear carpetas y archivos en una sola operación desde el explorador de archivos.
+>
+> Por ejemplo, al seleccionar **Nuevo archivo** y escribir:
+>
+> ```text
+> carpeta/archivo.js
+> ```
+>
+> VS Code creará automáticamente la carpeta `carpeta`, si todavía no existe, y dentro de ella el archivo `archivo.js`.
+>
+> También puedes crear varios niveles de carpetas:
+>
+> ```text
+> src/components/Button.js
+> ```
+>
+> Esto resulta útil para organizar proyectos sin tener que crear cada carpeta manualmente.
 
 
