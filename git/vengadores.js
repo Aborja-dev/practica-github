@@ -18,5 +18,10 @@ export const vengadores = [
   id: 4,
   nombre: "thor",
   fecha_entrada: "11/10/2022"
+},
+{
+  id: 5,
+  nombre: "deadpool",
+  fecha_entrada: "11/10/2026"
 }
 ]
