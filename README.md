@@ -1,6 +1,3 @@
----
-descripcion: El objetivo de esta guía es aprender a instalar, configurar y utilizar las herramientas básicas que emplearemos durante las prácticas.
----
 
 # Primeros pasos
 

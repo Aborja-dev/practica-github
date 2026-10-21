@@ -139,6 +139,17 @@ Este comando copia la clave pública al portapapeles de Windows.
 ssh -T git@github.com
 ```
 
+si la conexión marca el siguiente error kex_exchange_identification: read: Software caused connection abort es necesario configurar el puerto apra ello siga estos pasos
+1 ve a C:\Users\tu-usaurio\.ssh
+2 entra al archivo config o crealo si no existe
+3 abrelo con bloc de notas
+4 pega este fragmento
+Host github.com
+       Hostname ssh.github.com
+       Port 443
+       User git
+5 prueba con ssh -T git@github.com te pedira permiso escribe yes para aceptar
+
 La primera vez puede solicitarte confirmar la identidad del servidor. Comprueba su huella digital antes de aceptarla.
 
 Si la autenticación funciona, GitHub mostrará un mensaje de bienvenida.
